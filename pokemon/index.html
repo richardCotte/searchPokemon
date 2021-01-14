@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moteur de recherche Pokemon</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <label for="poke-search" id="text">Search Pokemon:</label>
+        <input type="search" id="poke-search" name="Pokemon" aria-label="Search thourgh pokemon API">
+        <button id="search_button">Search</button>
+    </div>
+    <div class="poke-card hidden">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" class="sprite"></img>
+        <div class="infos">
+            <h2 class="name">Dracofeu</h2>
+            <div class="weight">375kg</div>
+        </div>
+        <div class="types">
+            <span class="type">Feu</span>
+            <span class="type">Dragon</span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

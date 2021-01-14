@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(39, 39, 39);
+}
+
+.hidden {
+    visibility: hidden;
+    display: none !important;
+}
+
+.poke-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px auto;
+  border: 1px solid gray;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.poke-card * {
+    margin: 0;
+    padding: 0;
+}
+
+.infos {
+    padding: 16px;
+    color:rgb(197, 197, 197);
+}
+
+.name {
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.types {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  text-transform: capitalize;
+}
+
+.type {
+    background: orange;
+    color: white;
+    border-radius: 16px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    text-transform: capitalize;
+}
+
+#search_button {
+    background-color:rgb(71, 71, 71);
+    color: rgb(172, 172, 172);
+}
+
+#text {
+    color: rgb(172, 172, 172);
+}
