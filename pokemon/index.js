@@ -17,11 +17,10 @@ async function fetchPokeName(name) {
 };
 
 function addPokemonToDom(pokemon) {
-    const body = document.querySelector("body");
+    const poke_list = document.querySelector('.poke_list');
     const poke_card = document.querySelector('.poke-card');
-    console.log(poke_card);
     const new_poke_card = poke_card.cloneNode(true);
-    body.appendChild(new_poke_card);
+    poke_list.appendChild(new_poke_card);
     new_poke_card.classList.remove("hidden");
     const poke_name = new_poke_card.querySelector('.name');
     const poke_weight = new_poke_card.querySelector('.weight');
@@ -40,12 +39,17 @@ function addPokemonToDom(pokemon) {
 }
 
 async function search() {
-    var search_name = document.getElementById("poke-search").value;
+    const poke_list = document.querySelector('.poke_list');
+    let search_name = document.getElementById("poke-search").value;
     console.log("Founding " + search_name);
     const pokemon = await fetchPokeName(search_name);
-    if (pokemon){
-        addPokemonToDom(pokemon);
+    tablo.push(pokemon);
+    console.log(tablo);
+    poke_list.textContent ="";
+    if (pokemon) {
+        tablo.forEach (addPokemonToDom);
     };
 };
 
+let tablo = [];
 button.addEventListener('click', search);
